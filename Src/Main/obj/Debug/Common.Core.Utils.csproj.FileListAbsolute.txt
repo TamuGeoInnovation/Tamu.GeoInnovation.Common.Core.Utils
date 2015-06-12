@@ -1,0 +1,4 @@
+C:\DevBuild\Tamu\GeoInnovation\Common\Core\Utils\build\1.0.0\debug\Tamu.GeoInnovation.Common.Core.Utils.dll
+C:\DevBuild\Tamu\GeoInnovation\Common\Core\Utils\build\1.0.0\debug\Tamu.GeoInnovation.Common.Core.Utils.pdb
+C:\DevSource\Tamu\GeoInnovation\Common\Core\Utils\Src\Main\obj\Debug\Tamu.GeoInnovation.Common.Core.Utils.dll
+C:\DevSource\Tamu\GeoInnovation\Common\Core\Utils\Src\Main\obj\Debug\Tamu.GeoInnovation.Common.Core.Utils.pdb
