@@ -1,4 +1,0 @@
-C:\Dev\VS2008DotNetDevelopment\USC\GISResearchLab\Common\Core.LowSecurity\build\v1.1\bin\AnyCPU\release\USC.GISResearchLab.Common.Core.LowSecurity.dll
-C:\Dev\VS2008DotNetDevelopment\USC\GISResearchLab\Common\Core.LowSecurity\src\obj\Release\USC.GISResearchLab.Common.Core.LowSecurity.dll
-C:\DevBuild\Tamu\GeoInnovation\Common\Core\LowSecurity\build\1.0.0\release\Tamu.GeoInnovation.Common.Core.LowSecurity.dll
-C:\DevSource\Tamu\GeoInnovation\Common\Core\LowSecurity\Src\Main\obj\Release\Tamu.GeoInnovation.Common.Core.LowSecurity.dll
