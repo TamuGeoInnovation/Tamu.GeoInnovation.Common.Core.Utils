@@ -5,15 +5,15 @@ using System.Data;
 using System.Text;
 
 
-namespace USC.GISResearchLab.Common.Utils.Strings
+namespace USC.GISResearchLab.Common.Utils.NGrams
 {
     /// <summary>
     /// Summary description for StringUtils.
     /// </summary>
-    public class GramUtils
+    public class NGramUtils
     {
 
-        public GramUtils()
+        public NGramUtils()
         {
         }
 
