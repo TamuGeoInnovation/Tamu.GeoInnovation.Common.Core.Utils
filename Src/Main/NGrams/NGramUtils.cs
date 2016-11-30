@@ -61,7 +61,7 @@ namespace USC.GISResearchLab.Common.Utils.NGrams
                         if (!String.IsNullOrEmpty(words))
                         {
                             string[] parts = words.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-                            for (int i = 0; i < parts.Length - 1; i++)
+                            for (int i = 0; i < parts.Length; i++)
                             {
                                 string word1 = parts[i];
                                 if (!String.IsNullOrEmpty(word1))
@@ -71,29 +71,13 @@ namespace USC.GISResearchLab.Common.Utils.NGrams
                                     {
                                         word1 = word1.ToLower();
 
-                                        string word2 = parts[i + 1];
-                                        if (!String.IsNullOrEmpty(word2))
+                                        if (hashTable.ContainsKey(word1))
                                         {
-                                            word2 = word2.Trim();
-                                            if (!String.IsNullOrEmpty(word2))
-                                            {
-                                                word2 = word2.ToLower();
-
-                                                StringBuilder sb = new StringBuilder();
-                                                sb.Append(word1);
-                                                sb.Append(" ");
-                                                sb.Append(word2);
-                                                string combined = sb.ToString();
-
-                                                if (hashTable.ContainsKey(combined))
-                                                {
-                                                    hashTable[combined] = (int)hashTable[combined] + 1;
-                                                }
-                                                else
-                                                {
-                                                    hashTable.Add(combined, 1);
-                                                }
-                                            }
+                                            hashTable[word1] = (int)hashTable[word1] + 1;
+                                        }
+                                        else
+                                        {
+                                            hashTable.Add(word1, 1);
                                         }
                                     }
                                 }
@@ -112,7 +96,7 @@ namespace USC.GISResearchLab.Common.Utils.NGrams
             }
             catch (Exception ex)
             {
-                string msg = "Error getting GetNonRankedItemsAsDataTable: " + ex.Message;
+                string msg = "Error getting ComputeUniGramsFromDataTable: " + ex.Message;
                 throw new Exception(msg, ex);
             }
 
@@ -189,7 +173,7 @@ namespace USC.GISResearchLab.Common.Utils.NGrams
             }
             catch (Exception ex)
             {
-                string msg = "Error getting GetNonRankedItemsAsDataTable: " + ex.Message;
+                string msg = "Error getting ComputeBiGramsFromDataTable: " + ex.Message;
                 throw new Exception(msg, ex);
             }
 
@@ -279,7 +263,7 @@ namespace USC.GISResearchLab.Common.Utils.NGrams
             }
             catch (Exception ex)
             {
-                string msg = "Error getting GetNonRankedItemsAsDataTable: " + ex.Message;
+                string msg = "Error getting ComputeTriGramsFromDataTable: " + ex.Message;
                 throw new Exception(msg, ex);
             }
 
