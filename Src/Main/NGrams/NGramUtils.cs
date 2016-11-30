@@ -27,11 +27,11 @@ namespace USC.GISResearchLab.Common.Utils.NGrams
             }
             else if (gramCount == 2)
             {
-                ret = ComputeUniGramsFromDataTable(dataTable, columnName);
+                ret = ComputeBiGramsFromDataTable(dataTable, columnName);
             }
             else if (gramCount == 3)
             {
-                ret = ComputeUniGramsFromDataTable(dataTable, columnName);
+                ret = ComputeTriGramsFromDataTable(dataTable, columnName);
             }
             else
             {
