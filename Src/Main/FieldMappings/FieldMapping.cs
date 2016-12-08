@@ -30,5 +30,13 @@ namespace USC.GISResearchLab.Common.FieldMappings
             MaxLength = maxLength;
             Precision = precision;
         }
+
+        public void SetDefaultValue()
+        {
+            if (!String.IsNullOrEmpty(Name))
+            {
+                Value = Name;
+            }
+        }
     }
 }
