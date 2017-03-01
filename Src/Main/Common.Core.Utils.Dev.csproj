@@ -98,6 +98,7 @@
     <Compile Include="FieldMappings\FieldMapping.cs" />
     <Compile Include="FieldMappings\OutputFieldMappings.cs" />
     <Compile Include="Globalization\Constants\GlobalizationConstants.cs" />
+    <Compile Include="NGrams\NGramUtils.cs" />
     <Compile Include="Lists\SortableList.cs" />
     <Compile Include="Maths\Combinatorials\CombinationGenerator.cs" />
     <Compile Include="Maths\NumericStrings\NumericStringManager.cs" />

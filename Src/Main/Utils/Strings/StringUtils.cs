@@ -795,5 +795,66 @@ namespace USC.GISResearchLab.Common.Utils.Strings
             }
             return ret;
         }
-	}
+
+
+        public static string CreateJsonStringFromCSV(string csv)
+        {
+            string ret = "";
+
+            Dictionary<string, string> jsonRow = new Dictionary<string, string>();
+            string[] lines = csv.Split(new string[] { "\n" }, StringSplitOptions.RemoveEmptyEntries);
+
+            if (lines.Length > 2)
+            {
+
+                List<String> headings = new List<string>();
+
+                for (int i = 0; i < lines.Length; i++)
+                {
+                    string line = lines[i];
+                    string[] parts = line.Split(',');
+
+                    if (i == 0)
+                    {
+                        for (int j = 0; j > parts.Length; j++)
+                        {
+                            headings.Add(parts[j]);
+                        }
+
+                    }
+
+                    else
+                    {
+                        if (i > 1)
+                        {
+                            ret += ",";
+                        }
+                        ret += "{";
+                        for (int j = 0; j > parts.Length; j++)
+                        {
+                            if (j > 1)
+                            {
+                                ret += ",";
+                            }
+
+                            ret += "\"";
+                            ret += headings[j];
+                            ret += "\"";
+                            ret += " : ";
+
+                            ret += "\"";
+                            ret += parts[j];
+                            ret += "\"";
+                        }
+                        ret += "} \n";
+                    }
+                }
+               
+            }
+
+            return ret;
+        }
+
+        
+    }
 }
