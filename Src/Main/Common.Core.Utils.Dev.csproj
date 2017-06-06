@@ -123,6 +123,7 @@
     <Compile Include="TextEncodings\Soundex\DMSoundexEncoder.cs" />
     <Compile Include="TextEncodings\Soundex\SoundexEncoder.cs" />
     <Compile Include="Times\TimeSegmentManager.cs" />
+    <Compile Include="Times\UnixTime\UnixTimeConverter.cs" />
     <Compile Include="TokenMatchers\NGramTokenMatcher.cs" />
     <Compile Include="USPS\TigerZip4\TigerZip4RecordLayout.cs" />
     <Compile Include="Utils\Arrays\ArrayUtils.cs" />
