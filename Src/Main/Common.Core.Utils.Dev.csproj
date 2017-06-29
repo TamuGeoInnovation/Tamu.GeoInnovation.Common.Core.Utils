@@ -160,10 +160,6 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.XML" />
-    <Reference Include="Tamu.GeoInnovation.Common.Core.Addresses, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Common.Core.Addresses\build\1.0.0\AnyCPU\debug\Tamu.GeoInnovation.Common.Core.Addresses.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="LICENSE.md" />
@@ -191,6 +187,12 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common.Core.Addresses\Src\Main\Common.Core.Addresses.Dev.csproj">
+      <Project>{29c0949b-4d41-4138-b59b-6de4a6a1774e}</Project>
+      <Name>Common.Core.Addresses.Dev</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!--  
