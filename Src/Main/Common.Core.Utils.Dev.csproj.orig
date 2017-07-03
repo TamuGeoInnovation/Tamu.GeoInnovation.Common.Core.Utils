@@ -1,3 +1,202 @@
+<<<<<<< HEAD
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <!--  <UsingTask TaskName="USC.GISResearchLab.Common.BuildTasks.AutoIncrementBuildNumber" AssemblyFile="USC.GISResearchLab.Common.BuildTasks.dll" /> -->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0744A732-A7FE-4658-967D-C5A583EF08E4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tamu.GeoInnovation.Common.Core.Utils</RootNamespace>
+    <AssemblyName>Tamu.GeoInnovation.Common.Core.Utils</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\build\1.0.0\AnyCPU\debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\build\1.0.0\AnyCPU\release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoWarn>168,219,114,108</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\build\v1.1\bin\x86\debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>..\build\v1.1\bin\x86\release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <NoWarn>168,219,114,108</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ArrayLists\ArrayListUtils.cs" />
+    <Compile Include="Attributes\AttributeHelper.cs" />
+    <Compile Include="Collections\NameValueCollections\NameValueCollectionBuilder.cs" />
+    <Compile Include="Base64Converters\Base64Converter.cs" />
+    <Compile Include="Dates\DateManager.cs" />
+    <Compile Include="Encoding\Utf8EncodingUtils.cs" />
+    <Compile Include="FieldMappings\FieldMapping.cs" />
+    <Compile Include="FieldMappings\OutputFieldMappings.cs" />
+    <Compile Include="Globalization\Constants\GlobalizationConstants.cs" />
+    <Compile Include="NGrams\NGramUtils.cs" />
+    <Compile Include="Lists\SortableList.cs" />
+    <Compile Include="Maths\Combinatorials\CombinationGenerator.cs" />
+    <Compile Include="Maths\NumericStrings\NumericStringManager.cs" />
+    <Compile Include="Maths\Statistics\CorrelationCalculator.cs" />
+    <Compile Include="Maths\Statistics\DescriptiveStatisticsCalculator.cs" />
+    <Compile Include="Physics\CenterOfMassCalculations\CenterOfMassCalculator.cs" />
+    <Compile Include="PriorityQueue\BinaryPriorityQueue.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegularExpressions\RegularExpressionManager.cs" />
+    <Compile Include="Serializers\BinarySerializer.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="StringComparators\EditDistances\LevenshteinEditDistance.cs" />
+    <Compile Include="StringComparators\EditDistances\Sift3.cs" />
+    <Compile Include="Synonyms\MultiTokenSynonyms\MultiTokenSynonym.cs" />
+    <Compile Include="Synonyms\MultiTokenSynonyms\MultiTokenSynonymList.cs" />
+    <Compile Include="Synonyms\MultiTokenSynonyms\MultiTokenSynonymSet.cs" />
+    <Compile Include="Synonyms\SingleTokenSynonyms\Synonym.cs" />
+    <Compile Include="Synonyms\SingleTokenSynonyms\SynonymList.cs" />
+    <Compile Include="Synonyms\SingleTokenSynonyms\SynonymSet.cs" />
+    <Compile Include="TemplateObjects\SingleValueObjects\SingleValueObject.cs" />
+    <Compile Include="TemplateObjects\SingleValueObjects\SingleValueString.cs" />
+    <Compile Include="TextEncodings\Soundex\DMSoundexEncoder.cs" />
+    <Compile Include="TextEncodings\Soundex\SoundexEncoder.cs" />
+    <Compile Include="Times\TimeSegmentManager.cs" />
+    <Compile Include="TokenMatchers\NGramTokenMatcher.cs" />
+    <Compile Include="USPS\TigerZip4\TigerZip4RecordLayout.cs" />
+    <Compile Include="Utils\Arrays\ArrayUtils.cs" />
+    <Compile Include="Utils\Attributes\AttributeHelperUtils.cs" />
+    <Compile Include="Utils\Booleans\BooleanUtils.cs" />
+    <Compile Include="Utils\Dates\DateTimeUtils.cs" />
+    <Compile Include="Utils\Math\MathUtils.cs" />
+    <Compile Include="Utils\Numbers\NumberUtils.cs" />
+    <Compile Include="Utils\Strings\Patterns\PatternUtils.cs" />
+    <Compile Include="Utils\Strings\StringUtils.cs" />
+    <Compile Include="Utils\Types\TypeUtils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SqlServer.Types, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\..\_RepoConfig\SolutionFiles\packages\Microsoft.SqlServer.Types.11.0.2\lib\net20\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LICENSE.md" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\..\_RepoConfig\SolutionFiles\packages\Microsoft.SqlServer.Types.11.0.2\nativeBinaries\x64\msvcr100.dll">
+      <Link>SqlServerTypes\x64\msvcr100.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\_RepoConfig\SolutionFiles\packages\Microsoft.SqlServer.Types.11.0.2\nativeBinaries\x64\SqlServerSpatial110.dll">
+      <Link>SqlServerTypes\x64\SqlServerSpatial110.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\_RepoConfig\SolutionFiles\packages\Microsoft.SqlServer.Types.11.0.2\nativeBinaries\x86\msvcr100.dll">
+      <Link>SqlServerTypes\x86\msvcr100.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\_RepoConfig\SolutionFiles\packages\Microsoft.SqlServer.Types.11.0.2\nativeBinaries\x86\SqlServerSpatial110.dll">
+      <Link>SqlServerTypes\x86\SqlServerSpatial110.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LICENSE.txt" />
+    <Content Include="SqlServerTypes\readme.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common.Core.Addresses\Src\Main\Common.Core.Addresses.Dev.csproj">
+      <Project>{29c0949b-4d41-4138-b59b-6de4a6a1774e}</Project>
+      <Name>Common.Core.Addresses.Dev</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+=======
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <!--  <UsingTask TaskName="USC.GISResearchLab.Common.BuildTasks.AutoIncrementBuildNumber" AssemblyFile="USC.GISResearchLab.Common.BuildTasks.dll" /> -->
@@ -161,6 +360,10 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.XML" />
+    <Reference Include="Tamu.GeoInnovation.Common.Core.Addresses, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Common.Core.Addresses\build\1.0.0\AnyCPU\debug\Tamu.GeoInnovation.Common.Core.Addresses.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="LICENSE.md" />
@@ -189,13 +392,8 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\Common.Core.Addresses\Src\Main\Common.Core.Addresses.Dev.csproj">
-      <Project>{29c0949b-4d41-4138-b59b-6de4a6a1774e}</Project>
-      <Name>Common.Core.Addresses.Dev</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+>>>>>>> c3483f3718f604a5bf432cde2253b2b944005051
   <!--  
   <Target Name="BeforeBuild">
     <AutoIncrementBuildNumber AssemblyFileLocation="$(MSBuildProjectDirectory)\Properties\AssemblyInfo.cs" ExecuteFileLocation="$(TargetPath)" />
