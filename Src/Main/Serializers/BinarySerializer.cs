@@ -22,6 +22,7 @@ namespace USC.GISResearchLab.Common.Core.Serializers
 
                         bf.Serialize(ms, o);
                         ret = ms.ToArray();
+                        ms.Dispose();
                     }
                     else
                     {
@@ -49,6 +50,7 @@ namespace USC.GISResearchLab.Common.Core.Serializers
                     BinaryFormatter bf = new BinaryFormatter();
 
                     ret = bf.Deserialize(ms);
+                    ms.Dispose();
                 }
             }
             catch (Exception e)
