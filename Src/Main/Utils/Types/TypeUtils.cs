@@ -1,4 +1,6 @@
 using System;
+using System.Data;
+using System.Reflection;
 using System.Text;
 
 namespace USC.GISResearchLab.Common.Utils.Types
@@ -89,6 +91,32 @@ namespace USC.GISResearchLab.Common.Utils.Types
                 throw new Exception("Type FromName exception: Unknown type: " + name);
             }
 
+            return ret;
+        }
+
+        public static object ObjectFromDataRow(Type targetType, DataRow dataRow)
+        {
+            object ret = null;
+
+            try
+            {
+                ret = Activator.CreateInstance(targetType);
+                foreach (DataColumn cl in dataRow.Table.Columns)
+                {
+                    PropertyInfo pi = targetType.GetProperty(cl.ColumnName, BindingFlags.IgnoreCase | BindingFlags.Public | BindingFlags.Instance);
+
+                    if (pi != null && dataRow[cl] != DBNull.Value)
+                    {
+                        var propType = Nullable.GetUnderlyingType(pi.PropertyType) ?? pi.PropertyType;
+                        pi.SetValue(ret, Convert.ChangeType(dataRow[cl], propType), new object[0]);
+                    }
+                }
+
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Exception in ObjectFromDataRow: " + e.Message, e);
+            }
             return ret;
         }
     }
