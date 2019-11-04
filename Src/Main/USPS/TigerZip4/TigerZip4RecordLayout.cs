@@ -13,9 +13,9 @@ namespace USC.GISResearchLab.Common.USPS.TigerZip4
         public static int[] CensusTract = new int[] { 30, 35, 6 };
         public static int[] CensusBlock = new int[] { 36, 39, 4 };
         public static int[] FromLat = new int[] { 40, 48, 9 };
-        public static int[] FromLon = new int[] { 49, 58, 10};
+        public static int[] FromLon = new int[] { 49, 58, 10 };
         public static int[] ToLat = new int[] { 59, 67, 9 };
-        public static int[] ToLon = new int[] { 68, 77, 10};
+        public static int[] ToLon = new int[] { 68, 77, 10 };
         public static int[] PMSACode = new int[] { 78, 81, 4 };
         public static int[] CMSACode = new int[] { 82, 85, 4 };
         public static int[] MultipleMatchCode = new int[] { 86, 86, 1 };

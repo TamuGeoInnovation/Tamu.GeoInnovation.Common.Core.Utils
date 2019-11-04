@@ -12,7 +12,7 @@ namespace USC.GISResearchLab.Common.Core.Physics.CenterOfMassCalculations
             double totalMass = 0;
             double totalX = 0;
             double totalY = 0;
-            
+
             // sum up the total x, y, and mass of the sytem
             foreach (double[] xym in xymList)
             {

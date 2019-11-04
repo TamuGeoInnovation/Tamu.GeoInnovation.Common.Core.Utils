@@ -8,7 +8,7 @@ namespace USC.GISResearchLab.Common.Core.Maths.Statistics
     public class DescriptiveStatisticsCalculator
     {
 
-       #region Properties
+        #region Properties
 
         private bool _IsCalculated { get; set; }
         private List<double> _Values;
@@ -47,7 +47,7 @@ namespace USC.GISResearchLab.Common.Core.Maths.Statistics
         {
             _Values = new List<double>();
             _QuartileValues = new double[4];
-            _QuartileCounts= new double[4];
+            _QuartileCounts = new double[4];
         }
 
         public DescriptiveStatisticsCalculator(double[] values)
@@ -87,8 +87,8 @@ namespace USC.GISResearchLab.Common.Core.Maths.Statistics
             }
             return ret;
         }
-        
-    
+
+
 
         public DataTable CalculateStatistics()
         {
@@ -128,7 +128,7 @@ namespace USC.GISResearchLab.Common.Core.Maths.Statistics
                     CalculateQuartileCounts();
                 }
 
-                
+
                 DataRow row = ret.NewRow();
                 row["Maximum"] = _Maximum;
                 row["Minimum"] = _Minimum;

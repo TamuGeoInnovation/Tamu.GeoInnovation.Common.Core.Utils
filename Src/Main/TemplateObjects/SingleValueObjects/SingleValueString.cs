@@ -11,7 +11,7 @@ namespace USC.GISResearchLab.Common.TemplateObjects.SingleValueObjects
         }
 
         public SingleValueString(string value)
-            :base(value)
+            : base(value)
         {
         }
 

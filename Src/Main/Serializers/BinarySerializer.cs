@@ -9,7 +9,7 @@ namespace USC.GISResearchLab.Common.Core.Serializers
 
         public static byte[] Serialize(object o)
         {
-            
+
             byte[] ret = null;
             try
             {

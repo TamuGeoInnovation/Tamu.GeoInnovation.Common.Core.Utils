@@ -3,14 +3,14 @@ using System.Collections;
 
 namespace USC.GISResearchLab.Common.Utils.ArrayLists
 {
-	/// <summary>
-	/// Summary description for ArrayListUtils.
-	/// </summary>
-	public class ArrayListUtils
-	{
-		public ArrayListUtils()
-		{
-		}
+    /// <summary>
+    /// Summary description for ArrayListUtils.
+    /// </summary>
+    public class ArrayListUtils
+    {
+        public ArrayListUtils()
+        {
+        }
 
         public static ArrayList intersectLists(ArrayList list1, ArrayList list2)
         {
@@ -58,18 +58,18 @@ namespace USC.GISResearchLab.Common.Utils.ArrayLists
 
         }
 
-		public static bool isEmpty(ArrayList a)
-		{
-			bool ret = true;
-			if (a != null)
-			{
-				if (a.Count > 0)
-				{
-					ret = false;
-				}
-			}
-			return ret;
-		}
+        public static bool isEmpty(ArrayList a)
+        {
+            bool ret = true;
+            if (a != null)
+            {
+                if (a.Count > 0)
+                {
+                    ret = false;
+                }
+            }
+            return ret;
+        }
 
         public static string[] AsStringArray(ArrayList a)
         {
@@ -85,11 +85,11 @@ namespace USC.GISResearchLab.Common.Utils.ArrayLists
             return ret;
         }
 
-		public static bool ContainsString(ArrayList a, string s)
-		{
-			bool ret = false;
-			if (!isEmpty(a))
-			{
+        public static bool ContainsString(ArrayList a, string s)
+        {
+            bool ret = false;
+            if (!isEmpty(a))
+            {
                 for (int i = 0; i < a.Count; i++)
                 {
                     string curr = (string)a[i];
@@ -99,8 +99,8 @@ namespace USC.GISResearchLab.Common.Utils.ArrayLists
                         break;
                     }
                 }
-			}
-			return ret;
-		}
-	}
+            }
+            return ret;
+        }
+    }
 }

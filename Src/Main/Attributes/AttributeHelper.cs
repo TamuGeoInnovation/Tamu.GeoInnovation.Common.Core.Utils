@@ -16,13 +16,13 @@ namespace USC.GISResearchLab.Common.Attributes
         public Type DataType
         {
             get { return _DataType; }
-			set
-			{
-				_DataType = value;
-				if (value != null) _Value = TypeUtils.GetDefaultValue(_DataType);
-			}
+            set
+            {
+                _DataType = value;
+                if (value != null) _Value = TypeUtils.GetDefaultValue(_DataType);
+            }
         }
-	
+
 
         public string Alias
         {
@@ -35,7 +35,7 @@ namespace USC.GISResearchLab.Common.Attributes
             get { return _Value; }
             set { _Value = value; }
         }
-	
+
 
         public string Name
         {
@@ -109,7 +109,7 @@ namespace USC.GISResearchLab.Common.Attributes
                 return false;
             }
 
-            return a.Name == b.Name && a.DataType == b.DataType ;
+            return a.Name == b.Name && a.DataType == b.DataType;
         }
 
         public static bool operator !=(AttributeHelper a, AttributeHelper b)

@@ -3,7 +3,7 @@ using System.Data;
 
 namespace USC.GISResearchLab.Common.Core.Times
 {
-    public enum TimeSegmentTypes {year, month, week, day, hour, minute, second, millisecond};
+    public enum TimeSegmentTypes { year, month, week, day, hour, minute, second, millisecond };
 
     public class TimeSegmentManager
     {

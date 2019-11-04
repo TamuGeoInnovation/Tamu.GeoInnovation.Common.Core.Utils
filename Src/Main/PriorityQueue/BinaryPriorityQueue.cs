@@ -3,7 +3,7 @@ using System.Collections;
 
 namespace USC.GISResearchLab.Common.Core.PriorityQueue
 {
-    
+
     public class BinaryPriorityQueue : IPriorityQueue, ICollection, ICloneable, IList
     {
         private ArrayList InnerList = new ArrayList();
@@ -43,7 +43,7 @@ namespace USC.GISResearchLab.Common.Core.PriorityQueue
             InnerList[j] = h;
         }
 
-        
+
 
         protected virtual int OnCompare(int i, int j)
         {
@@ -97,7 +97,7 @@ namespace USC.GISResearchLab.Common.Core.PriorityQueue
                 p2 = 2 * p + 2;
                 if (InnerList.Count > p1 && OnCompare(p, p1) > 0)
                     p = p1;
-                if (InnerList.Count > p2 && OnCompare(p, p2) > 0) 
+                if (InnerList.Count > p2 && OnCompare(p, p2) > 0)
                     p = p2;
 
                 if (p == pn)
@@ -119,7 +119,7 @@ namespace USC.GISResearchLab.Common.Core.PriorityQueue
         {
             int p = i, pn;
             int p1, p2;
-            do	
+            do
             {
                 if (p == 0)
                     break;
@@ -134,7 +134,7 @@ namespace USC.GISResearchLab.Common.Core.PriorityQueue
             } while (true);
             if (p < i)
                 return;
-            do	   
+            do
             {
                 pn = p;
                 p1 = 2 * p + 1;

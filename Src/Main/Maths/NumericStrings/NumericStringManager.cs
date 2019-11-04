@@ -310,7 +310,7 @@ namespace USC.GISResearchLab.Common.Core.Maths.NumericStrings
                 ret = GetNumberPartOfNumericAbbreviation(s) > 0;
                 IsNumericAbbreviationCache.Add(s, ret);
             }
-            
+
             return ret;
         }
 

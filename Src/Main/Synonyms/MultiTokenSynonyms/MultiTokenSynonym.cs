@@ -6,7 +6,7 @@ namespace USC.GISResearchLab.Common.Synonyms.MultiTokenSynonyms
     public class MultiTokenSynonym
     {
         #region Properties
-        
+
         private string[] _PreferredValue;
         public string[] PreferredValue
         {

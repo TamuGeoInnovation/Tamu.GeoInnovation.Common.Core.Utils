@@ -7,17 +7,17 @@ using USC.GISResearchLab.Common.Utils.Numbers;
 
 namespace USC.GISResearchLab.Common.Utils.Strings
 {
-	/// <summary>
-	/// Summary description for StringUtils.
-	/// </summary>
-	public class StringUtils
-	{
+    /// <summary>
+    /// Summary description for StringUtils.
+    /// </summary>
+    public class StringUtils
+    {
 
-        public enum EsacpeCharAction{remove, repeat, replace};
+        public enum EsacpeCharAction { remove, repeat, replace };
 
-		public StringUtils()
-		{
-		}
+        public StringUtils()
+        {
+        }
 
 
         public static string GetRandomString()
@@ -75,7 +75,7 @@ namespace USC.GISResearchLab.Common.Utils.Strings
             NameValueCollection nvc = new NameValueCollection();
             //strip string data before the question mark
             qs = qs.IndexOf('?') > 0 ? qs.Remove(0, qs.IndexOf('?') + 1) : qs;
-            
+
             string[] sqarr = qs.Split("&".ToCharArray());
 
             for (int i = 0; i < sqarr.Length; i++)
@@ -292,18 +292,18 @@ namespace USC.GISResearchLab.Common.Utils.Strings
             return NumberUtils.GetLastNumeral(s);
         }
 
-		public static bool IsEmpty(string s)
-		{
-			bool ret = true;
-			if (s != null)
-			{
-				if (s != String.Empty)
-				{
-					ret = false;
-				}
-			}
-			return ret;
-		}
+        public static bool IsEmpty(string s)
+        {
+            bool ret = true;
+            if (s != null)
+            {
+                if (s != String.Empty)
+                {
+                    ret = false;
+                }
+            }
+            return ret;
+        }
 
 
         // this is from http://stackoverflow.com/questions/11789194/string-format-how-can-i-format-to-x-digits-regardless-of-decimal-place
@@ -490,12 +490,12 @@ namespace USC.GISResearchLab.Common.Utils.Strings
         public static bool IsBoolean(int i)
         {
             bool ret = false;
-            
+
             if (i == 0 || i == 1)
             {
                 ret = true;
             }
-            
+
             return ret;
         }
 
@@ -696,7 +696,7 @@ namespace USC.GISResearchLab.Common.Utils.Strings
             return ret;
         }
 
-        
+
         public static string InsertCharAtPositionFromEnd(string source, string insert, int position)
         {
             string ret = "";
@@ -849,12 +849,12 @@ namespace USC.GISResearchLab.Common.Utils.Strings
                         ret += "} \n";
                     }
                 }
-               
+
             }
 
             return ret;
         }
 
-        
+
     }
 }

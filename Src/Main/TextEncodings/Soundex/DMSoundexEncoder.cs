@@ -28,7 +28,7 @@ namespace USC.GISResearchLab.Common.Core.TextEncodings.Soundex
         }
         public String compute(string word)
         {
-            
+
             return compute(word, 6);
         }
         public string compute(string s, int length)

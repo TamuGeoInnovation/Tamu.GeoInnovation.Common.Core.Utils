@@ -8,7 +8,7 @@ namespace USC.GISResearchLab.Common.Synonyms.MultiTokenSynonyms
         #region Properties
 
         private string[] _Key;
-        public string[]  Key
+        public string[] Key
         {
             get { return _Key; }
             set { _Key = value; }

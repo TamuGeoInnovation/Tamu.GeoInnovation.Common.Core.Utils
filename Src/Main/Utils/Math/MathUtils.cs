@@ -2,29 +2,29 @@ using System;
 
 namespace USC.GISResearchLab.Common.Utils.Math
 {
-	/// <summary>
-	/// Summary description for MathUtils.
-	/// </summary>
-	public class MathUtils
-	{
-		public MathUtils()
-		{
-		}
+    /// <summary>
+    /// Summary description for MathUtils.
+    /// </summary>
+    public class MathUtils
+    {
+        public MathUtils()
+        {
+        }
 
-		public static long greatestCommonDivisor(long a, long b) 
-		{
-			while (a!=0 && b!=0) 
-			{
-				if(a > b)
-					a = a % b;
-				else
-					b = b % a;
-			}
-			if(a == 0)
-				return b;
-			else
-				return a;
-		}
+        public static long greatestCommonDivisor(long a, long b)
+        {
+            while (a != 0 && b != 0)
+            {
+                if (a > b)
+                    a = a % b;
+                else
+                    b = b % a;
+            }
+            if (a == 0)
+                return b;
+            else
+                return a;
+        }
 
         public static double DegreesToRadians(double degrees)
         {
@@ -40,5 +40,5 @@ namespace USC.GISResearchLab.Common.Utils.Math
         {
             return BitConverter.GetBytes(decimal.GetBits(d)[3])[2];
         }
-	}
+    }
 }

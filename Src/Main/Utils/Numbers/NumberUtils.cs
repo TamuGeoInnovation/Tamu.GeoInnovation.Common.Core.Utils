@@ -3,17 +3,17 @@ using System.Collections;
 
 namespace USC.GISResearchLab.Common.Utils.Numbers
 {
-	/// <summary>
-	/// Summary description for NumberUtils.
-	/// </summary>
-	public class NumberUtils
-	{
-		public NumberUtils()
-		{
-		}
+    /// <summary>
+    /// Summary description for NumberUtils.
+    /// </summary>
+    public class NumberUtils
+    {
+        public NumberUtils()
+        {
+        }
 
         static NumberUtils()
-		{
+        {
             onesNonOrdinalHashtable = new Hashtable();
             for (int i = 0; i < onesNonOrdinal.Length; i++)
             {
@@ -43,7 +43,7 @@ namespace USC.GISResearchLab.Common.Utils.Numbers
             {
                 thouHashtable.Add(thou[i], i);
             }
-		}
+        }
 
         public static String[] abbreviation_suffixes = { "ST", "ND", "RD", "TH" };
 
@@ -133,7 +133,7 @@ namespace USC.GISResearchLab.Common.Utils.Numbers
                             "quadrillion",
                             "quintillion"
                           };
-        
+
         public static bool IsInt(object o)
         {
             return IsInt(o.ToString());
@@ -217,22 +217,22 @@ namespace USC.GISResearchLab.Common.Utils.Numbers
             return ret;
         }
 
-		public static double AsDouble(string s, bool throwError)
-		{
-			double ret = 0;
-			try
-			{
-				ret = AsDouble(s);
-			}
-			catch(Exception e)
-			{
-				if (throwError)
-				{
-					throw new Exception("An error occured parsing a double value", e);
-				}
-			}
-			return ret;
-		}
+        public static double AsDouble(string s, bool throwError)
+        {
+            double ret = 0;
+            try
+            {
+                ret = AsDouble(s);
+            }
+            catch (Exception e)
+            {
+                if (throwError)
+                {
+                    throw new Exception("An error occured parsing a double value", e);
+                }
+            }
+            return ret;
+        }
 
         public static bool IsEven(double d)
         {
@@ -369,7 +369,7 @@ namespace USC.GISResearchLab.Common.Utils.Numbers
             return ret;
         }
 
-        public static string  GetTrailingNonNumerals(string s)
+        public static string GetTrailingNonNumerals(string s)
         {
             string ret = "";
             for (int i = 0; i < s.Length; i++)
@@ -694,7 +694,7 @@ namespace USC.GISResearchLab.Common.Utils.Numbers
 
             string retval = "";
             string x = "";
-            
+
 
             string[] ones = null;
             if (useOrdinals)
@@ -823,7 +823,7 @@ namespace USC.GISResearchLab.Common.Utils.Numbers
                 string abbrv = getNumericAbbreviationSuffixForNumber(numberValue);
                 ret = numberValue + abbrv;
             }
-            
+
 
             return ret;
         }
@@ -888,7 +888,7 @@ namespace USC.GISResearchLab.Common.Utils.Numbers
                     int tensNonOrdinalIndex = -1;
                     int tensNonOrdinalLength = -1;
 
-                    
+
                     foreach (string key in tensNonOrdinalHashTable.Keys)
                     {
                         tensNonOrdinalIndex = s.IndexOf(key);
@@ -934,5 +934,5 @@ namespace USC.GISResearchLab.Common.Utils.Numbers
 
             return ret;
         }
-	}
+    }
 }
