@@ -580,6 +580,27 @@ namespace USC.GISResearchLab.Common.Utils.Numbers
             return ret;
         }
 
+        public static bool isPoundNumber(String s)
+        {
+            bool ret = false;
+            if (isNumber(s))
+            {
+                ret = true;
+            }
+            else if (s.IndexOf("#") != -1)
+            {
+                String[] parts = s.Split('#');
+                if (parts.Length == 2)
+                {
+                    if (isNumber(parts[1]))
+                    {
+                        ret = true;
+                    }
+                }
+            }
+            return ret;
+        }
+
         public static bool isPartlyDashedNumber(String s)
         {
             bool ret = false;
@@ -658,7 +679,7 @@ namespace USC.GISResearchLab.Common.Utils.Numbers
 
         public static bool isAnyTypeOfNumber(String s)
         {
-            return (isNumber(s) || isDashedNumber(s) || isFraction(s) || resemblesNumber(s));
+            return (isNumber(s) || isDashedNumber(s) || isFraction(s) || isPoundNumber(s) || resemblesNumber(s));
         }
 
         public static string IntegerToWords(string s)
