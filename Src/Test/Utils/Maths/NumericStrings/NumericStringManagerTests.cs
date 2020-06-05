@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using System;
 using System.Collections;
 using System.IO;
 using System.Linq;
@@ -246,6 +247,29 @@ namespace USC.GISResearchLab.Common.Core.Maths.NumericStrings.Tests
         {
             var result = _numericStringManager.IsNumberAndNumericAbbreviationSuffix(value);
             Assert.IsFalse(result, $"{value} should be true");
+        }
+
+        [Test()]
+        [TestCase("one", "1st")]
+        [TestCase("two", "2nd")]
+        [TestCase("three", "3rd")]
+        [TestCase("four", "4th")]
+        [TestCase("ten", "10th")]
+        public void WordsToNumericAbbreviationTest_ReturnTrue(string input, string expected)
+        {
+            var result = _numericStringManager.WordsToNumericAbbreviation(input);
+            Assert.AreEqual(expected, result.ToLower(), $"{input} should be true");
+        }
+
+        [Test()]
+        [TestCase("1")]
+        [TestCase(null)]
+        [TestCase("")]
+        [TestCase(" ")]
+        public void WordsToNumericAbbreviationTest_ReturnExcpetion(string input)
+        {
+            var ex = Assert.Throws<ArgumentException>(() => _numericStringManager.WordsToNumericAbbreviation(input));
+            Assert.That(ex.Message, Is.EqualTo("Invalid parameter value"));
         }
     }
 }

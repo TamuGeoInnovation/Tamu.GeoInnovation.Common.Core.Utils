@@ -550,11 +550,29 @@ namespace USC.GISResearchLab.Common.Core.Maths.NumericStrings
         public string WordsToNumericAbbreviation(string s)
         {
             string ret = "";
-            if (IsNumberWords(s))
+            if (!String.IsNullOrEmpty(s))
             {
-                int numberValue = WordsToInteger(s);
-                string abbrv = getNumericAbbreviationSuffixForNumber(numberValue);
-                ret = numberValue + abbrv;
+                if (!String.IsNullOrWhiteSpace(s))
+                {
+                    if (IsNumberWords(s))
+                    {
+                        int numberValue = WordsToInteger(s);
+                        string abbrv = getNumericAbbreviationSuffixForNumber(numberValue);
+                        ret = numberValue + abbrv;
+                    }
+                    else
+                    {
+                        throw new ArgumentException("Invalid parameter value");
+                    }
+                }
+                else
+                {
+                    throw new ArgumentException("Invalid parameter value");
+                }
+            }
+            else
+            {
+                throw new ArgumentException("Invalid parameter value");
             }
 
 
