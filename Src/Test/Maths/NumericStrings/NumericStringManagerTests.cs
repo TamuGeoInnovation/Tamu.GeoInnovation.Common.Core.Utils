@@ -1,4 +1,8 @@
 ﻿using NUnit.Framework;
+using System.Collections;
+using System.IO;
+using System.Linq;
+using System.Reflection;
 
 namespace USC.GISResearchLab.Common.Core.Maths.NumericStrings.Tests
 {
@@ -11,6 +15,7 @@ namespace USC.GISResearchLab.Common.Core.Maths.NumericStrings.Tests
         {
             _numericStringManager = new NumericStringManager();
         }
+
 
         [Test]
         [TestCase("-1")]
@@ -55,6 +60,7 @@ namespace USC.GISResearchLab.Common.Core.Maths.NumericStrings.Tests
             Assert.IsFalse(result, $"{value} should be false");
         }
 
+
         [Test()]
         [TestCase("-1", "0")]
         [TestCase("zero", "1")]
@@ -84,6 +90,73 @@ namespace USC.GISResearchLab.Common.Core.Maths.NumericStrings.Tests
         {
             var result = _numericStringManager.AreBothSomeFormOfNumericValues(value1, value2);
             Assert.IsFalse(result, $"{value1} and {value2} should be false");
+        }
+
+        public static IEnumerable AreBothSomeFormOfNumericValuesTestData_ReturnTrue()
+        {
+            // path = D:\\DevSource\\Tamu\\GeoInnovation\\Common.Core.Utils\\Src\\Test\\bin\\Debug\\net48
+            var path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            var directoryInfo = Directory.GetParent(Assembly.GetExecutingAssembly().Location);
+            var dataFilePath = directoryInfo.Parent.Parent.Parent.FullName;
+            dataFilePath = Path.Combine(dataFilePath, "TestData", "NumericStringManagerTests-AreBothSomeFormOfNumericValuesTestData_ReturnTrue.txt");
+
+            if (File.Exists(dataFilePath))
+            {
+                var testData = File.ReadAllLines(dataFilePath)
+                    .Select(s => s.Split(','));
+
+
+                if (testData != null)
+                {
+                    foreach (var list in testData)
+                    {
+                        if (list != null && list.Length == 2)
+                        {
+                            yield return new TestCaseData(list[0], list[1]).Returns(true);
+                        }
+                    }
+                }
+            }
+        }
+
+        [Test, TestCaseSource("AreBothSomeFormOfNumericValuesTestData_ReturnTrue")]
+        public bool AreBothSomeFormOfNumericValuesTestFromDataFile_ReturnTrue(string value1, string value2)
+        {
+            return _numericStringManager.AreBothSomeFormOfNumericValues(value1, value2);
+        }
+
+        public static IEnumerable AreBothSomeFormOfNumericValuesTestData_ReturnFalse()
+        {
+            // path = D:\\DevSource\\Tamu\\GeoInnovation\\Common.Core.Utils\\Src\\Test\\bin\\Debug\\net48
+            var path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            var directoryInfo = Directory.GetParent(Assembly.GetExecutingAssembly().Location);
+            var dataFilePath = directoryInfo.Parent.Parent.Parent.FullName;
+            dataFilePath = Path.Combine(dataFilePath, "TestData", "NumericStringManagerTests-AreBothSomeFormOfNumericValuesTestData_ReturnFalse.txt");
+
+            if (File.Exists(dataFilePath))
+            {
+                var testData = File.ReadAllLines(dataFilePath)
+                    .Select(s => s.Split(','));
+
+
+                if (testData != null)
+                {
+                    foreach (var list in testData)
+                    {
+                        if (list != null && list.Length == 2)
+                        {
+                            yield return new TestCaseData(list[0], list[1]).Returns(false);
+                        }
+                    }
+                }
+            }
+        }
+
+        [Test, TestCaseSource("AreBothSomeFormOfNumericValuesTestData_ReturnFalse")]
+        public bool AreBothSomeFormOfNumericValuesTestFromDataFile_ReturnFalse(string value1, string value2)
+        {
+            return _numericStringManager.AreBothSomeFormOfNumericValues(value1, value2);
+            //Assert.IsFalse(result, $"{value1} and {value2} should be false");
         }
 
         [Test()]

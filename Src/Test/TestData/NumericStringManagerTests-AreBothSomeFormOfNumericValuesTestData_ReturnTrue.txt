@@ -1,0 +1,12 @@
+﻿-1,0
+zero,1
+one,first
+2,two
+second,3
+three,third
+4,four
+fourth,5
+five,fifth
+10,ten
+tenth,11
+eleven,eleventh
